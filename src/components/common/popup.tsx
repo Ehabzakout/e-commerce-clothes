@@ -17,7 +17,10 @@ const PopUp = ({ products }: { products: product[] }) => {
             products?.map((product) => (
               <div className="flex items-center gap-3 text-xs" key={product.id}>
                 <div className="mt-3 h-16 w-16">
-                  <img src="https://placehold.co/192x192"></img>
+                  <img
+                    src={product.img}
+                    className="size-16 rounded-sm object-cover"
+                  ></img>
                 </div>
                 <div>
                   <h1>{product.title}</h1>

@@ -42,7 +42,11 @@ const Product = memo((prop: product) => {
             </div>
           )}
 
-          <img src="https://placehold.co/192x192" alt={title}></img>
+          <img
+            src={prop.img ? prop.img : "https://placehold.co/192x192"}
+            alt={title}
+            className="h-full w-full rounded-lg object-cover"
+          ></img>
           <div className="absolute right-1 top-1 cursor-pointer">
             {isLoading ? (
               <i className="fa-solid fa-spinner fa-spin text-main"></i>

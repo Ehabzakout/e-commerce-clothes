@@ -19,7 +19,10 @@ export const CartItem = (prop: product) => {
   return (
     <div className="mr-5 mt-5 flex flex-wrap border-b-2 border-darkHover pb-5">
       <div className="xs:w-full md:w-fit">
-        <img src="https://placehold.co/192x192" className="mx-auto" />
+        <img
+          src={prop.img ? prop.img : "https://placehold.co/192x192"}
+          className="mx-auto size-40 rounded-lg"
+        />
       </div>
       <div className="ml-3 flex flex-col gap-3 py-3 xs:w-1/2">
         <h1>{title}</h1>
